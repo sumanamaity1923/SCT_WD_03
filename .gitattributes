@@ -1,2 +1,24 @@
-# Auto detect text files and perform LF normalization
+# Handle line endings consistently
 * text=auto
+
+# Explicitly declare text files
+*.html text
+*.css  text
+*.js   text
+*.md   text
+
+# Treat images as binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.svg  binary
+
+# Merge settings (use ours/theirs)
+*.lock merge=union
+
+# Keep Windows batch files CRLF
+*.bat text eol=crlf
+
+# Keep shell scripts LF
+*.sh  text eol=lf
